@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number</title>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif; text-align: center; margin: 20%;">
+    <p><div class="number" id="number" style="font-size: 50px;">0</div></p>
+    <p><button class="button" onclick="decrease()" style="font-size: 40px; font-family: 'Times New Roman', Times, serif;">Dec</button>
+      <button class="button" onclick="increase()" style="font-size: 40px; font-family: 'Times New Roman', Times, serif;">Inc</button></p>
+
+  <script>
+    var currentNumber = 0;
+    const displayNumber = document.getElementById('number');
+
+    function increase() {
+      currentNumber++;
+      display();
+    }
+
+    function decrease() {
+      if(currentNumber > 0) {
+        currentNumber--;
+        display();
+      }
+      
+    }
+
+    function display() {
+      displayNumber.textContent = currentNumber;
+    }
+  </script>
+</body>
+</html>
